@@ -4,8 +4,12 @@ import "./Dashboard.css";
 import Transaction from "../Transaction/Transaction";
 import IncomeChart from "../IncomeChart/IncomeChart";
 import ExpenseChart from "../ExpenseChart/ExpenseChart";
+interface DashboardProps {
+  userId: string | null;
+  onLogout: () => void;
+}
 
-const Dashboard = ({ onLogout }: { onLogout: () => void }) => {
+const Dashboard: React.FC<DashboardProps> = ({ userId, onLogout }) => {
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState<boolean>(() => localStorage.getItem("darkMode") === "true");
   const [transactions, setTransactions] = useState<{ id: number; type: "income" | "expense"; category: string; amount: number }[]>([]);
