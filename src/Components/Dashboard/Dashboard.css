@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poiret+One&display=swap');
+
+@keyframes slideRight {
+  0% { transform: translateX(-100px); 
+        opacity: 0;}
+  100% { transform: translateX(0px); 
+          opacity: 1;}
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(100px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes lazyLoad {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(240, 238, 238);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #222;
+  background-color: #007bff;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.dashboard-header h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  animation: slideLeft 1s ease-in-out forwards;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  animation: slideRight 1s ease-in-out forwards;
+}
+
+.dark-mode-toggle {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #222;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+.welcome {
+  font-size: 3rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #121212;
+  font-family: "Oswald", sans-serif;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.budget-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #222;
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.budget-box h2 {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  color:#121212;
+}
+
+.budget-box p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.income-expense h2 {
+  font-size: 1.5rem;
+  color:#121212
+}
+
+.income-expense p {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 20px;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.dynamic-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .dashboard {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .dashboard-header {
+  background-color: #222;
+}
+
+.dark-mode .dashboard-header h1 {
+  color: white;
+}
+
+.dark-mode .welcome {
+  font-size: 3rem;
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.dark-mode .budget-summary {
+  background-color: #292929;
+  color: white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .budget-box h2 {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+.dark-mode .budget-box p {
+  color: #f9a825;
+}
+
+.dark-mode .income-expense h2 {
+  color: white;
+}
+
+.dark-mode .income-expense p {
+  color: white;
+}
+
+.dark-mode .buttons button {
+  background-color: #444;
+}
+
+.dark-mode .buttons button:hover {
+  background-color: #222;
+}
+
+.dark-mode .dynamic-content {
+  background-color: #292929;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #f9a825;
+  color: black;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: #ffeb3b;
+}
+
+.dark-mode .logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.dark-mode .logout-btn:hover {
+  background-color: #cc0000;
+}

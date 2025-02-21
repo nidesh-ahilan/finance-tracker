@@ -1,0 +1,89 @@
+.transaction-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #dcdcdc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .transaction-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  .transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .transaction-form select,
+  .transaction-form input {
+    padding: 10px;
+    font-family: "Poiret One", sans-serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #ECEFF4;
+    color: #3B4252;
+  }
+  
+  .transaction-form button {
+    background: #81A1C1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .transaction-form button:hover {
+    background: #5E81AC;
+  }
+  
+  .transaction-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .income {
+    background: #A3BE8C;
+    color: #2E3440;
+  }
+  
+  .expense {
+    background: #BF616A;
+    color: #ECEFF4;
+  }
+  
+  .transaction-item button {
+    background: transparent;
+    border: none;
+    color: #ECEFF4;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+  .transaction-item button:hover {
+    color: #D08770;
+  }
+  
