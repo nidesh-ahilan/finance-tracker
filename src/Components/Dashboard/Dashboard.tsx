@@ -18,6 +18,8 @@ const Dashboard: React.FC<DashboardProps> = ({ userId, onLogout }) => {
   const [totalExpense, setTotalExpense] = useState(0);
   const activeUser = localStorage.getItem("activeUser");
 
+  console.log("activeUser", userId);
+
   useEffect(() => {
     if (!activeUser) return;
 
