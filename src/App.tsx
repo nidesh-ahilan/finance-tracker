@@ -21,13 +21,12 @@ const App = () => {
   };
 
   return (
-    <Router basename='/finance-tracker'>
-      <Routes>
+    <Routes>
           <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />} />
           <Route path="/login" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Login onLogin={handleLogin} />} />
           <Route path="/dashboard/*" element={isAuthenticated ? <Dashboard userId = {activeUser} onLogout={handleLogout} /> : <Navigate to="/login" />} />
        </Routes>
-    </Router>
+
   );
 };
 
